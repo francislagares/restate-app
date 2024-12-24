@@ -1,58 +1,7 @@
-{
-  "/home/francislagares/webdev/restate-app/src/app/_layout.tsx": {
-    "path": "/home/francislagares/webdev/restate-app/src/app/_layout.tsx",
-    "statementMap": {
-      "0": {
-        "start": { "line": 4, "column": 2 },
-        "end": { "line": 4, "column": 19 }
-      }
-    },
-    "fnMap": {
-      "0": {
-        "name": "RootLayout",
-        "decl": {
-          "start": { "line": 3, "column": 24 },
-          "end": { "line": 3, "column": 34 }
-        },
-        "loc": {
-          "start": { "line": 3, "column": 37 },
-          "end": { "line": 5, "column": 1 }
-        },
-        "line": 3
-      }
-    },
-    "branchMap": {},
-    "s": { "0": 0 },
-    "f": { "0": 0 },
-    "b": {}
-  },
-  "/home/francislagares/webdev/restate-app/src/app/index.tsx": {
-    "path": "/home/francislagares/webdev/restate-app/src/app/index.tsx",
-    "statementMap": {
-      "0": {
-        "start": { "line": 4, "column": 2 },
-        "end": { "line": 14, "column": 4 }
-      }
-    },
-    "fnMap": {
-      "0": {
-        "name": "Index",
-        "decl": {
-          "start": { "line": 3, "column": 24 },
-          "end": { "line": 3, "column": 29 }
-        },
-        "loc": {
-          "start": { "line": 3, "column": 32 },
-          "end": { "line": 15, "column": 1 }
-        },
-        "line": 3
-      }
-    },
-    "branchMap": {},
-    "s": { "0": 1 },
-    "f": { "0": 1 },
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8564b5c6694fd0fc22c1ede7c295e44df27429e8"
-  }
+{"/home/francislagares/webdev/restate-app/tailwind.config.ts": {"path":"/home/francislagares/webdev/restate-app/tailwind.config.ts","statementMap":{},"fnMap":{},"branchMap":{},"s":{},"f":{},"b":{}}
+,"/home/francislagares/webdev/restate-app/src/app/_layout.tsx": {"path":"/home/francislagares/webdev/restate-app/src/app/_layout.tsx","statementMap":{"0":{"start":{"line":6,"column":2},"end":{"line":6,"column":19}}},"fnMap":{"0":{"name":"RootLayout","decl":{"start":{"line":5,"column":24},"end":{"line":5,"column":34}},"loc":{"start":{"line":5,"column":37},"end":{"line":7,"column":1}},"line":5}},"branchMap":{},"s":{"0":0},"f":{"0":0},"b":{}}
+,"/home/francislagares/webdev/restate-app/src/app/sign-in.tsx": {"path":"/home/francislagares/webdev/restate-app/src/app/sign-in.tsx","statementMap":{"0":{"start":{"line":4,"column":15},"end":{"line":10,"column":1}},"1":{"start":{"line":5,"column":2},"end":{"line":9,"column":4}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":4,"column":15},"end":{"line":4,"column":16}},"loc":{"start":{"line":4,"column":21},"end":{"line":10,"column":1}},"line":4}},"branchMap":{},"s":{"0":0,"1":0},"f":{"0":0},"b":{}}
+,"/home/francislagares/webdev/restate-app/src/app/(root)/(tabs)/explore.tsx": {"path":"/home/francislagares/webdev/restate-app/src/app/(root)/(tabs)/explore.tsx","statementMap":{"0":{"start":{"line":4,"column":16},"end":{"line":10,"column":1}},"1":{"start":{"line":5,"column":2},"end":{"line":9,"column":4}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":4,"column":16},"end":{"line":4,"column":17}},"loc":{"start":{"line":4,"column":22},"end":{"line":10,"column":1}},"line":4}},"branchMap":{},"s":{"0":0,"1":0},"f":{"0":0},"b":{}}
+,"/home/francislagares/webdev/restate-app/src/app/(root)/(tabs)/index.tsx": {"path":"/home/francislagares/webdev/restate-app/src/app/(root)/(tabs)/index.tsx","statementMap":{"0":{"start":{"line":5,"column":2},"end":{"line":19,"column":4}}},"fnMap":{"0":{"name":"Index","decl":{"start":{"line":4,"column":24},"end":{"line":4,"column":29}},"loc":{"start":{"line":4,"column":32},"end":{"line":20,"column":1}},"line":4}},"branchMap":{},"s":{"0":1},"f":{"0":1},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"879e346608ba1160af60306269b9cbe434005534"}
+,"/home/francislagares/webdev/restate-app/src/app/(root)/properties/[id].tsx": {"path":"/home/francislagares/webdev/restate-app/src/app/(root)/properties/[id].tsx","statementMap":{"0":{"start":{"line":5,"column":17},"end":{"line":13,"column":1}},"1":{"start":{"line":6,"column":17},"end":{"line":6,"column":39}},"2":{"start":{"line":8,"column":2},"end":{"line":12,"column":4}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":5,"column":17},"end":{"line":5,"column":18}},"loc":{"start":{"line":5,"column":23},"end":{"line":13,"column":1}},"line":5}},"branchMap":{},"s":{"0":0,"1":0,"2":0},"f":{"0":0},"b":{}}
 }
