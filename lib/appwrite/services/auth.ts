@@ -4,7 +4,7 @@ import { Account, Avatars, OAuthProvider } from 'react-native-appwrite';
 
 import { AuthError } from 'lib/error/auth';
 
-import { client } from '../config/client';
+import { client } from '../config/appwrite.client';
 
 const extractAuthCredentials = (url: URL) => {
   const secret = url.searchParams.get('secret')?.toString();
@@ -58,6 +58,35 @@ export const login = async () => {
     } else {
       console.error('Unexpected error during login:', error);
     }
+    throw error;
+  }
+};
+
+export const logout = async () => {
+  try {
+    await account.deleteSession('current');
+
+    return true;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
+
+export const getUser = async () => {
+  try {
+    const response = await account.get();
+
+    if (response.$id) {
+      const userAvatar = await avatar.getInitials(response.name);
+
+      return {
+        ...response,
+        avatar: userAvatar.toString(),
+      };
+    }
+  } catch (error) {
+    console.error('Error:', error);
     throw error;
   }
 };
