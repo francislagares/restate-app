@@ -4,6 +4,8 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 
+import AuthProvider from '@/lib/appwrite/contexts/global-provider';
+
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     'Rubik-Bold': require('@/assets/fonts/Rubik-Bold.ttf'),
@@ -22,5 +24,9 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <AuthProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </AuthProvider>
+  );
 }

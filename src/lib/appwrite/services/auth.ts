@@ -2,7 +2,7 @@ import * as linking from 'expo-linking';
 import { openAuthSessionAsync } from 'expo-web-browser';
 import { Account, Avatars, OAuthProvider } from 'react-native-appwrite';
 
-import { AuthError } from 'lib/error/auth';
+import { AuthError } from '@/lib/error/auth';
 
 import { client } from '../config/appwrite.client';
 
@@ -73,7 +73,7 @@ export const logout = async () => {
   }
 };
 
-export const getUser = async () => {
+export const getCurrentUser = async () => {
   try {
     const response = await account.get();
 

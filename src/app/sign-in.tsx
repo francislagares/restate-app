@@ -1,13 +1,33 @@
+import { Redirect } from 'expo-router';
 import React from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Alert,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import icons from '@/constants/icons';
 import images from '@/constants/images';
+import { useAuthContext } from '@/lib/appwrite/contexts/global-provider';
+import { login } from '@/lib/appwrite/services/auth';
 
 const SignIn = () => {
-  const handleLogin = () => {
-    // Implement Google login
+  const { refetch, loading, isLogged } = useAuthContext();
+
+  if (!loading && isLogged) return <Redirect href='/' />;
+
+  const handleLogin = async () => {
+    const response = await login();
+
+    if (response) {
+      refetch({});
+    } else {
+      Alert.alert('Failed to log in');
+    }
   };
 
   return (
@@ -20,16 +40,16 @@ const SignIn = () => {
         />
 
         <View className='px-10'>
-          <Text className='font-rubik text-black-200 text-center text-base uppercase'>
+          <Text className='text-center font-rubik text-base uppercase text-black-200'>
             Welcome to ReState
           </Text>
 
-          <Text className='font-rubik-bold text-black-300 mt-2 text-center text-3xl'>
+          <Text className='mt-2 text-center font-rubik-bold text-3xl text-black-300'>
             Let's Get You Closer to {'\n'}
             <Text className='text-primary-300'>Your Ideal Home</Text>
           </Text>
 
-          <Text className='font-rubik text-black-200 mt-12 text-center text-lg'>
+          <Text className='mt-12 text-center font-rubik text-lg text-black-200'>
             Log in to ReState with Google
           </Text>
 
@@ -43,7 +63,7 @@ const SignIn = () => {
                 className='h-5 w-5'
                 resizeMode='contain'
               />
-              <Text className='font-rubik-medium text-black-300 ml-2 text-lg'>
+              <Text className='ml-2 font-rubik-medium text-lg text-black-300'>
                 Continue with Google
               </Text>
             </View>
