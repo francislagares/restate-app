@@ -2,6 +2,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Card, FeaturedCard } from '@/components/Cards';
+import Filters from '@/components/Filters';
 import Search from '@/components/Search';
 import icons from '@/constants/icons';
 import { useAuthContext } from '@/lib/appwrite/contexts/global-provider';
@@ -48,6 +49,7 @@ export default function Index() {
       </View>
 
       <FeaturedCard />
+      <Filters />
       <Card />
     </SafeAreaView>
   );
