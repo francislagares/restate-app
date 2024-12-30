@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Search from '@/components/Search';
 import icons from '@/constants/icons';
 import { useAuthContext } from '@/lib/appwrite/contexts/global-provider';
+import { Card, FeaturedCard } from '@/components/Cards';
 
 export default function Index() {
   const { user } = useAuthContext();
@@ -45,6 +46,9 @@ export default function Index() {
           </View>
         </View>
       </View>
+
+      <FeaturedCard />
+      <Card />
     </SafeAreaView>
   );
 }
