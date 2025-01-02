@@ -25,7 +25,7 @@ const propertyTypes = [
   'Studio',
   'Villa',
   'Apartment',
-  'Others',
+  'Other',
 ];
 
 const facilities = ['Laundry', 'Parking', 'Gym', 'Wifi', 'Pet-friendly'];
@@ -54,9 +54,9 @@ function getRandomSubset<T>(
   // Shuffle the array copy using Fisher-Yates algorithm
   for (let i = arrayCopy.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
-    [arrayCopy[i], arrayCopy[randomIndex]] = [
-      arrayCopy[randomIndex],
-      arrayCopy[i],
+    [arrayCopy[i]!, arrayCopy[randomIndex]!] = [
+      arrayCopy[randomIndex]!,
+      arrayCopy[i]!,
     ];
   }
 
@@ -168,7 +168,7 @@ async function seed() {
           rating: Math.floor(Math.random() * 5) + 1,
           facilities: selectedFacilities,
           image: image,
-          agent: assignedAgent.$id,
+          agent: assignedAgent?.$id,
           reviews: assignedReviews.map(review => review.$id),
           gallery: assignedGalleries.map(gallery => gallery.$id),
         },
