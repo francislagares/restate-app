@@ -12,10 +12,15 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Card, FeaturedCard } from '@/components/Cards';
 import Filters from '@/components/Filters';
+import NoResults from '@/components/NoResults';
 import Search from '@/components/Search';
 import icons from '@/constants/icons';
 import { useAuthContext } from '@/lib/appwrite/contexts/global-provider';
 import { useAppwrite } from '@/lib/appwrite/hooks/useAppwrite';
+import {
+  getLatestProperties,
+  getProperties,
+} from '@/lib/appwrite/services/api';
 
 const Home = () => {
   const { user } = useAuthContext();

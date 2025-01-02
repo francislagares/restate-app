@@ -14,9 +14,10 @@ export const FeaturedCard = ({ item, onPress }: CardProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      className='item-start relative flex h-80 w-60 flex-col'
+      className='relative flex h-80 w-60 flex-col items-start'
     >
-      <Image source={images.japan} className='size-full rounded-2xl' />
+      <Image source={{ uri: item.image }} className='size-full rounded-2xl' />
+
       <Image
         source={images.cardGradient}
         className='absolute bottom-0 size-full rounded-2xl'
