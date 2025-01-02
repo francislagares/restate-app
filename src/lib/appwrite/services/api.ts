@@ -59,7 +59,7 @@ export const getProperties = async ({
   }
 };
 
-export const getProperty = async (propertyId: string) => {
+export const getProperty = async ({ propertyId }: { propertyId: string }) => {
   try {
     const response = await databases.getDocument(
       appwriteConfig.databaseId!,
