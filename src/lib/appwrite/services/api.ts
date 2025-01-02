@@ -8,7 +8,7 @@ import { appwriteConfig } from '../config/appwrite.config';
 type PropertyQuery = {
   filter: string;
   query: string;
-  limit: number;
+  limit?: number;
 };
 
 export const getLatestProperties = async () => {
